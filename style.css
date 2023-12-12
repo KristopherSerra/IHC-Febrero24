@@ -172,3 +172,9 @@ input[type="submit"]:active
     height: calc(20vw - 2px);
   }
 }
+.titulares {
+  display:flex;
+    justify-content: space-between; /*Con esto le indicamos que margine todos los items que se encuentra adentro hacia la derecha e izquierda*/
+    align-items: center; /*con esto alineamos de manera vertical*/
+
+}
