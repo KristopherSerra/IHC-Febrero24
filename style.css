@@ -12,7 +12,7 @@ body
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: darkgrey;
+  background: rgb(39, 39, 39);
 }
 section 
 {
@@ -193,7 +193,7 @@ input[type="submit"]:active
 }
 
 #navigation {
-  background-color: #01a6de;
+  background-color: #0f0;
 }
 
 /* Carrusel*/
@@ -227,6 +227,18 @@ input[type="submit"]:active
 }
 
 .header{
-  color: #01a6de;
+  color: #0f0;
   margin: 40px;
+}
+.closed{
+  color:#0f0;
+  font-size: large;
+  font-weight: bolder;
+  text-decoration: none;
+  background-color: inherit;
+  border-width: 0px;
+  justify-content: right;
+}
+.closed:hover{
+  color:rgb(0, 156, 0);
 }
