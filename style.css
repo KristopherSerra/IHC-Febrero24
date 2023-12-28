@@ -281,13 +281,12 @@ input[type="submit"]:active {
 
 .input-group{
   position: relative;
-  width: 50%;
   background: #222;
   border: none;
   outline: none;
-  padding: 25px 10px 7.5px;
   border-radius: 4px;
   color: #fff;
   font-weight: 500;
   font-size: 1em;
+  margin: 0px auto;
 }
