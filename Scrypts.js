@@ -25,3 +25,6 @@ function validateEmailAddress(email) {
     var userInput = document.querySelector("#Username");
     var emailInput =document.querySelector("#Email");
     var passwordInput = document.querySelector("#Password");
+
+
+    

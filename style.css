@@ -6,12 +6,19 @@
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
 }
+
+:root{
+  --clr-main:  rgb(39, 39, 39);
+  --clr-letters: #0f0;
+  --clr-white: #fff;
+  --clr-black: black;
+}
+
 body{
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: rgb(39, 39, 39);
+  background:var(--clr-main);
 }
 section{
   position: absolute;
@@ -19,7 +26,6 @@ section{
   height: 100vh;
   display: flex;
   justify-content: center;
-  
   gap: 2px;
   flex-wrap: wrap;
   overflow: hidden;
@@ -45,21 +51,22 @@ section span {
   transition: 1.5s;
 }
 section span:hover {
-  background: #0f0;
+  background: var(--clr-letters);
   transition: 0s;
 }
 
 section .signin {
-  position: absolute;
-  width: 500px;
-  background: #333;  
+  position: relative;
+  width: 30rem;
+  background: #333;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 40px 0px 40px;
-  border-radius: 4px;
-  box-shadow: 0 15px 35px rgba(0,0,0,9);
+  padding: 0 2.7rem 0 2.7rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0rem 5rem rgb(0, 0, 0);
+  height: 45rem;
 }
 section .signin .content {
   position: relative;
@@ -72,7 +79,7 @@ section .signin .content {
 }
 section .signin .content h2 {
   font-size: 1.5em;
-  color: #0f0;
+  color: var(--clr-letters);
   text-transform: uppercase;
 }
 section .signin .content .form {
@@ -88,12 +95,12 @@ section .signin .content .form .inputBox {
 section .signin .content .form .inputBox input {
   position: relative;
   width: 100%;
-  background: #222;
+  background: var(--clr-main);
   border: none;
   outline: none;
   padding: 25px 10px 7.5px;
   border-radius: 4px;
-  color: #fff;
+  color: var(--clr-white);
   font-weight: 500;
   font-size: 1em;
 }
@@ -111,7 +118,7 @@ section .signin .content .form .inputBox i {
 {
   transform: translateY(-7.5px);
   font-size: 0.8em;
-  color: #fff;
+  color: var(--clr-white);
 }
 .signin .content .form .links {
   position: relative;
@@ -120,16 +127,16 @@ section .signin .content .form .inputBox i {
   justify-content: space-between;
 }
 .signin .content .form .links a {
-  color: #fff;
+  color: var(--clr-white);
   text-decoration: none;
 }
 .signin .content .form .links a:nth-child(2) {
-  color: #0f0;
+  color: var(--clr-letters);
   font-weight: 600;
 }
 .signin .content .form .inputBox input[type="submit"] {
   padding: 10px;
-  background: #0f0;
+  background: var(--clr-letters);
   color: #000;
   font-weight: 600;
   font-size: 1.35em;
@@ -138,26 +145,10 @@ section .signin .content .form .inputBox i {
 }
 input[type="submit"]:active {
   opacity: 0.6;
-  background-color: #fff;
-  color: #0f0;
+  background-color: var(--clr-white);
+  color: var(--clr-letters);
 }
 
-
-
-@media (max-width: 1200px) {
-  
-  section span {
-    width: calc(10vw - 2px);
-    height: calc(10vw - 2px);
-  }
-}
-
-@media screen and (max-width: 480px){
-  section span {
-    width: calc(20vw - 2px);
-    height: calc(20vw - 2px);
-  }
-}
 .titulares {
   display: flex;
   justify-content: inherit;
@@ -170,17 +161,17 @@ input[type="submit"]:active {
   font-weight: bolder;
 }
 .navbar a:hover {
-  color: #fff;
+  color: var(--clr-white);
   transition-duration: 150ms;
   transition-property: color;
 }
 
 #top-bar {
-  background-color: #222;
+  background-color: var(--clr-main);
 }
 
 #navigation {
-  background-color: rgb(0, 185, 0);
+  background-color:var(--clr-letters);
 }
 
 /* Carrusel*/
@@ -215,12 +206,12 @@ input[type="submit"]:active {
 }
 
 .header {
-  color: #0f0;
+  color: var(--clr-letters);
   margin: 40px;
 }
 
 .closed {
-  color:#0f0;
+  color:var(--clr-letters);
   font-size: xx-large;
   font-weight: bolder;
   text-decoration: none;
@@ -230,15 +221,15 @@ input[type="submit"]:active {
 }
 
 .closed:hover {
-  color:#fff;
+  color:var(--clr-white);
 }
 
 .icons {
-  color: #0f0;
+  color: var(--clr-letters);
 }
 
 .icons:hover {
-  color:rgb(255, 255, 255);
+  color:var(--clr-white);
   transition-duration: 150ms;
   transition-property: color;
 }
@@ -250,11 +241,11 @@ input[type="submit"]:active {
 }
 
 .barra:hover {
-  color:rgb(255, 255, 255);
+  color:var(--clr-white);
 }
 
 .banners {
-  box-shadow: #0f0 0px 0px 25px 5px;
+  box-shadow: var(--clr-letters) 0px 0px 25px 5px;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -263,30 +254,149 @@ input[type="submit"]:active {
 
 .busqueda {
   background-color: inherit;
-  color:#0f0;
-  border-color: #0f0;
+  color:var(--clr-letters);
+  border-color: var(--clr-letters);
 }
 .busqueda:hover {
-  background-color: #0f0;
+  background-color: var(--clr-letters);
   color:#000;
-  border-color: #0f0;
+  border-color: var(--clr-letters);
 }
 .barrabusqueda {
-  border-color: #0f0;
+  border-color: var(--clr-letters);
 }
 
 .barrabusqueda:hover {
-  border-color: #0f0;
+  border-color: var(--clr-letters);
 }
 
 .input-group{
   position: relative;
-  background: #222;
+  background: var(--clr-main);
   border: none;
   outline: none;
   border-radius: 4px;
-  color: #fff;
+  color: var(--clr-white);
   font-weight: 500;
   font-size: 1em;
   margin: 0px auto;
+}
+
+
+/* CATEGORIAS*/
+.lista-categorias{
+  display: flex;
+  color: var(--clr-white);
+  font-family: 'Roboto';
+  font-size: 1.2rem;
+}
+
+.lista-categorias ul li{
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.lista-categorias a{
+  color:var(--clr-white);
+  text-decoration: none;
+}
+.lista-categorias a:hover{
+  color:var(--clr-letters);
+  text-decoration: none;
+}
+/* FIN LISTA DE OFERTAS */
+
+.fondo{ 
+  background-color: #141414;
+  margin: 1.5rem 1.5rem 0 1.5rem;
+  border-radius: 0.5rem;
+  padding-bottom: 5rem;
+}
+
+/* Tarjetas*/
+.containers {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.productos {
+  border-color: white;
+  border-style: groove;
+  border-width: 0;
+  display: flex;
+  height: 20rem;
+  width: 15rem;
+  background-color: white;
+  transition: 0.2s ease-out;
+  position: relative;
+  margin: 0px 5px 5px 5px;
+}
+.productos:hover{
+  box-shadow: 0px 2px 15px var(--clr-letters);
+  transform: scaleZ(1000px);
+}
+.productos a:hover{
+  color: white;
+  /*color:rgb(218, 218, 218);*/
+}
+.title {
+  position: absolute;
+  color: var(--clr-black);
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  top: 10rem;
+  text-align: center;
+}
+.imagenes-tarjetas{
+  position: absolute;
+  left: 3.36rem;
+  top: 5px;
+  display: block;
+  max-width: 12rem;
+  max-height: 10rem;
+}
+.productos .Precio {
+  margin-left: 4rem;
+  padding-top: 14rem;
+  font-size: 1.6rem;
+  color: var(--clr-black);
+  position: absolute;
+}
+.Agregar-Carrito {
+  position: relative;
+  top: 25px;
+  border-bottom-width: 5px;
+  opacity: 0;
+  padding: 12px 20px;
+  color: white;
+  background: #01a6de;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin: 228px 25px 25px 53px;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.Agregar-Carrito a:hover{
+  color: white;
+}
+.productos:hover .Agregar-Carrito{
+  top: 0;
+  opacity: 1;
+}
+del{
+  color: rgb(175, 174, 174);
+}
+.descuento {
+  margin-left: 5.5rem;
+  padding-top: 16rem;
+  font-size: 1.2rem;
+  color: var(--clr-black);
+  font-weight: 100;
+  position: absolute;
+}
+/* FIN Productos*/
+.listado{
+  margin: 0 2.5rem 0 2.5rem;
 }
